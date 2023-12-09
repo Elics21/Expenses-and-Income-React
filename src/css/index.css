@@ -13,7 +13,7 @@
   margin-right: 20px;
   color: #000;
   font-family: Inter;
-  font-size: 32px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -25,6 +25,36 @@
 
 .user-img{
   margin-left: auto;
+}
+
+.adding-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.adding{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 200px;
+  border-radius: 20px;
+  background: #D6D6D6;
+}
+.adding-img{
+  width: 50px;
+}
+.adding-title{
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 15px;
 }
 
 

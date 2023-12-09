@@ -4,7 +4,7 @@ import userPng from "../../assets/user.png";
 const NavBar = () => {
     return (
         <ul className="nav">
-            <li>Главнвя</li>
+            <li>Главная</li>
             <li>История</li>
             <li className="user-name">Username</li>
             <li>
