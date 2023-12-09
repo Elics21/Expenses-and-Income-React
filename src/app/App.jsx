@@ -1,7 +1,8 @@
 import React from "react";
+import Main from "./components/main";
 
 function App() {
-    return <h1>ReactApp</h1>;
+    return <Main />;
 }
 
 export default App;
