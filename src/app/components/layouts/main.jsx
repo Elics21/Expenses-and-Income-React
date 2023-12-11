@@ -1,12 +1,12 @@
 import React from "react";
-import NavBar from "./navBar";
-import Adding from "./adding";
+import Adding from "../adding";
+import Dashboard from "../dashboard";
 
 const Main = () => {
     return (
         <>
-            <NavBar />
             <Adding />
+            <Dashboard />
         </>
     );
 };
