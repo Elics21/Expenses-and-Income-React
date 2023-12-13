@@ -1,5 +1,5 @@
 import React from "react";
-import addingImg from "../../../assets/plus.png";
+import addingImg from "../../../../assets/plus.png";
 import HistoryTable from "./historyTable";
 
 const HistoryList = () => {

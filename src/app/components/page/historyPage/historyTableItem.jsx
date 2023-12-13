@@ -1,6 +1,6 @@
 import React from "react";
-import trashImg from "../../../assets/trash.png";
-import penImg from "../../../assets/pen.png";
+import trashImg from "../../../../assets/trash.png";
+import penImg from "../../../../assets/pen.png";
 import PropTypes from "prop-types";
 
 const HistoryTableItem = ({ operation, onDelete }) => {

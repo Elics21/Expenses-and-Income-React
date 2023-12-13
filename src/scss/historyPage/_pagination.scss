@@ -1,0 +1,14 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    li{
+        text-align: center;
+        width: 20px;
+        font-size: 20px;
+        border: #000 solid;
+        margin-right: 10px;
+    }
+    .active{
+        background: #8b8b8b;
+    }
+}

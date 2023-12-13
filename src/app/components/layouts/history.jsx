@@ -1,5 +1,5 @@
 import React from "react";
-import HistoryList from "../historyPage/historyList";
+import HistoryList from "../page/historyPage/historyList";
 
 const History = () => {
     return <HistoryList />;
