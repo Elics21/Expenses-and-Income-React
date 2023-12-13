@@ -1,6 +1,6 @@
 import React from "react";
-import Adding from "../adding";
-import Dashboard from "../dashboard";
+import Adding from "../page/mainPage/adding/adding";
+import Dashboard from "../page/mainPage/dashboard";
 
 const Main = () => {
     return (

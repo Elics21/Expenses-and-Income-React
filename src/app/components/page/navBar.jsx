@@ -1,5 +1,5 @@
 import React from "react";
-import userPng from "../../assets/user.png";
+import userPng from "../../../assets/user.png";
 import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {

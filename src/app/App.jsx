@@ -1,7 +1,7 @@
 import React from "react";
 import Main from "./components/layouts/main";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "./components/navBar";
+import NavBar from "./components/page/navBar";
 import History from "./components/layouts/history";
 import UserLogin from "./components/layouts/userLogin";
 

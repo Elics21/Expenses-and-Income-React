@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import addingImg from "../../assets/plus.png";
+import addingImg from "../../../../../assets/plus.png";
 import PropTypes from "prop-types";
-import api from "../api";
+import api from "../../../../api";
 
 const AddingItem = ({ typeItem }) => {
     const [operations, setOperations] = useState([]);
@@ -39,15 +39,6 @@ const AddingItem = ({ typeItem }) => {
 
     const handeleAddOperation = () => {
         console.log("hello");
-        // setOperations((prevState) => [
-        //     ...prevState,
-        //     {
-        //         id: 6,
-        //         type: "income",
-        //         value: 88500,
-        //         title: "Взятка"
-        //     }
-        // ]);
     };
 
     return (

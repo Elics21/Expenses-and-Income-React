@@ -1,7 +1,8 @@
 import React from "react";
+import HistoryList from "../historyPage/historyList";
 
 const History = () => {
-    return <h1>History</h1>;
+    return <HistoryList />;
 };
 
 export default History;

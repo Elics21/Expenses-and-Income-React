@@ -1,0 +1,40 @@
+.history-table-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+  }
+  
+  
+  .history-table-item-buttons{
+    display: flex;
+  }
+  
+  
+  .history-table-item-btn{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+  }
+  
+  .history-table-item-btn:last-child{
+    margin-right: 0;
+  }
+  
+  .history-table-item div{
+    font-size: 18px;
+  }
+  
+  .history-table-item-title{
+    width: 20%;
+  }
+  .history-table-item-value{
+    width: 10%;
+  }
+  .history-table-item-descr{
+    width: 40%;
+  }
+  
+  .history-table-item-type{
+    width: 18%;
+  }
