@@ -3,8 +3,9 @@ import api from "../../../api";
 import HistoryTableItem from "./historyTableItem";
 import Pagination from "./pagination";
 import { paginate } from "../../../utils/paginate";
+import PropTypes from "prop-types";
 
-const HistoryTable = () => {
+const HistoryTable = ({ filter }) => {
     const [operations, setOperations] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -26,7 +27,12 @@ const HistoryTable = () => {
 
     const countOperation = operations.length;
 
-    const operationCrop = paginate(operations, currentPage, pageSize);
+    const operationsFitred =
+        filter !== ""
+            ? operations.filter((operation) => operation.type === filter)
+            : operations;
+
+    const operationCrop = paginate(operationsFitred, currentPage, pageSize);
 
     const handeleChangePage = (page) => {
         setCurrentPage(page);
@@ -53,6 +59,10 @@ const HistoryTable = () => {
             </div>
         </>
     );
+};
+
+HistoryTable.propTypes = {
+    filter: PropTypes.string
 };
 
 export default HistoryTable;

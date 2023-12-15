@@ -10,7 +10,6 @@ const Pagination = ({ currentPage, pageSize, count, onChagePage }) => {
         pages[j] = i;
         j++;
     }
-    console.log(typeof currentPage);
     return (
         <ul className="pagination">
             {pages.map((page) => (
