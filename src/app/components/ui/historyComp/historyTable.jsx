@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../../../api";
 import HistoryTableItem from "./historyTableItem";
-import Pagination from "./pagination";
+import Pagination from "../../common/pagination";
 import { paginate } from "../../../utils/paginate";
 import PropTypes from "prop-types";
 
