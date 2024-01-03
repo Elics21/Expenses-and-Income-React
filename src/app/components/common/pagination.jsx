@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-const Pagination = ({ currentPage, pageSize, count, onChagePage }) => {
+const Pagination = ({ currentPage, pageSize, count, onChangePage }) => {
     const pageCount = Math.ceil(count / pageSize);
     if (pageCount === 1) return null;
 
@@ -17,7 +17,7 @@ const Pagination = ({ currentPage, pageSize, count, onChagePage }) => {
                     key={"page-" + page}
                     className={currentPage === page ? "active" : ""}
                 >
-                    <button onClick={() => onChagePage(page)}>{page}</button>
+                    <button onClick={() => onChangePage(page)}>{page}</button>
                 </li>
             ))}
         </ul>
@@ -28,7 +28,7 @@ Pagination.propTypes = {
     currentPage: PropTypes.number.isRequired,
     pageSize: PropTypes.number.isRequired,
     count: PropTypes.number.isRequired,
-    onChagePage: PropTypes.func.isRequired
+    onChangePage: PropTypes.func.isRequired
 };
 
 export default Pagination;

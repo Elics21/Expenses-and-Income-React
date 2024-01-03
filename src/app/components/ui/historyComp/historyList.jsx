@@ -4,13 +4,20 @@ import HistoryTable from "./historyTable";
 import HistoryFilters from "./historyFiters";
 
 const HistoryList = () => {
-    const [filter, setFilter] = useState("");
+    const [filterType, setFilterType] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const handeleChangePage = (page) => {
+        setCurrentPage(page);
+    };
+
     const handeleSelectFilter = (type) => {
         if (type === "reset") {
-            setFilter("");
+            setFilterType("");
             return;
         }
-        setFilter(type);
+        setCurrentPage(1);
+        setFilterType(type);
     };
     return (
         <div className="history">
@@ -18,7 +25,7 @@ const HistoryList = () => {
                 <h2>История операций</h2>
                 <div className="history-menu-btn">
                     <HistoryFilters
-                        filter={filter}
+                        filterType={filterType}
                         onSelectFilter={handeleSelectFilter}
                     />
                     <button className="history-add-op">
@@ -27,7 +34,11 @@ const HistoryList = () => {
                     </button>
                 </div>
             </div>
-            <HistoryTable filter={filter} />
+            <HistoryTable
+                filterType={filterType}
+                currentPage={currentPage}
+                onChangePage={handeleChangePage}
+            />
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const HistoryFilters = ({ filter, onSelectFilter }) => {
+const HistoryFilters = ({ filterType, onSelectFilter }) => {
     const [isActive, setActive] = useState(false);
 
     const handeleOpenFilters = () => {
@@ -12,10 +12,9 @@ const HistoryFilters = ({ filter, onSelectFilter }) => {
         const name =
             "history-filtred-item " +
             (isActive ? "active" : "") +
-            (filter === typeItem ? " selected" : "");
+            (filterType === typeItem ? " selected" : "");
         return name;
     };
-    console.log(filter);
     return (
         <div className="history-filtred-wrapper">
             <button
@@ -50,7 +49,7 @@ const HistoryFilters = ({ filter, onSelectFilter }) => {
 };
 
 HistoryFilters.propTypes = {
-    filter: PropTypes.string.isRequired,
+    filterType: PropTypes.string.isRequired,
     onSelectFilter: PropTypes.func.isRequired
 };
 
