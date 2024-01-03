@@ -27,18 +27,23 @@ const AddingItem = ({ typeItem }) => {
     const operationsType = operations.filter(
         (operations) => operations.type === typeItem
     );
-
-    // Рендер операций подходящего типа
-    const renderOperations = () =>
-        operationsType.map((operation) => (
-            <div key={operation.id} className="adding-item-wrapper">
-                <div className="adding-item-title">{operation.title}</div>
-                <div className="adding-item-value">{operation.value}</div>
-            </div>
-        ));
-
+    const sizeOperationsInItem = 5;
+    const newOperationsArr = operationsType.slice(0, sizeOperationsInItem);
     const handeleAddOperation = () => {
         console.log("hello");
+    };
+
+    const renderOperations = () => {
+        if (operations.length !== 0) {
+            return newOperationsArr.map((operation) => (
+                <div key={operation.id} className="adding-item-wrapper">
+                    <div className="adding-item-title">{operation.title}</div>
+                    <div className="adding-item-value">{operation.value}</div>
+                </div>
+            ));
+        } else {
+            return "loading...";
+        }
     };
 
     return (
@@ -53,7 +58,7 @@ const AddingItem = ({ typeItem }) => {
                     />
                 </a>
             </div>
-            {operations.length !== 0 ? renderOperations() : "loading..."}
+            {renderOperations()}
         </div>
     );
 };

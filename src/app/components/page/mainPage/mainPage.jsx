@@ -1,11 +1,11 @@
 import React from "react";
-import Adding from "../../ui/adding/adding";
+import Addings from "../../ui/addingComp/addings";
 import Dashboard from "../../ui/dashboard";
 
 const MainPage = () => {
     return (
         <>
-            <Adding />
+            <Addings />
             <Dashboard />
         </>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 import AddingItem from "./addingItem";
 
-const Adding = () => {
+const Addings = () => {
     return (
         <div className="adding">
             <AddingItem typeItem={"income"} />
@@ -11,4 +11,4 @@ const Adding = () => {
     );
 };
 
-export default Adding;
+export default Addings;
