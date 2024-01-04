@@ -8,3 +8,18 @@ h1 {
     font-size: 38px;
     margin-bottom: 10px;
 }
+.form-btn {
+    transition: 0.3s all;
+    display: block;
+    margin: 0 auto;
+    margin-top: 18px;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid rgba(127, 127, 127, 0.5);
+    height: 40px;
+    background-color: rgb(190, 190, 190);
+    width: 100%;
+    &:hover {
+        background-color: rgb(164, 164, 164);
+    }
+}

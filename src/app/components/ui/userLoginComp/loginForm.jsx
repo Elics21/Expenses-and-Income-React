@@ -3,8 +3,9 @@ import "./loginForm.scss";
 import TextField from "../../common/form/textField";
 
 const LoginForm = () => {
-    const [data, setData] = useState({ userName: "" });
+    const [data, setData] = useState({ email: "", password: "" });
     const handleSubmit = (event) => {
+        event.preventDefault();
         console.log(event);
     };
     const handleChange = ({ target }) => {
@@ -20,12 +21,22 @@ const LoginForm = () => {
         <form onSubmit={handleSubmit} className="login-form">
             <h1>Login</h1>
             <TextField
-                label="UserName"
-                type="text"
-                name="userName"
+                label="Email"
+                type="email"
+                name="email"
                 onChange={handleChange}
-                value={data.userName}
+                value={data.email}
             />
+            <TextField
+                label="Password"
+                type="password"
+                name="password"
+                onChange={handleChange}
+                value={data.password}
+            />
+            <button type="submit" className="form-btn">
+                Войти
+            </button>
         </form>
     );
 };
