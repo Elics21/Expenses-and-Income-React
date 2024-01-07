@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "./form.scss";
 import TextField from "../../common/form/textField";
 import { Link } from "react-router-dom";
 
-const LoginForm = () => {
-    const [data, setData] = useState({ email: "", password: "" });
+const RegisterFrom = () => {
+    const [data, setData] = useState({ email: "", password: "", username: "" });
     const handleSubmit = (event) => {
         event.preventDefault();
     };
@@ -18,13 +17,20 @@ const LoginForm = () => {
     };
     return (
         <form onSubmit={handleSubmit} className="login-form">
-            <h1>Login</h1>
+            <h1>Register</h1>
             <TextField
                 label="Email"
                 type="email"
                 name="email"
                 onChange={handleChange}
                 value={data.email}
+            />
+            <TextField
+                label="Username"
+                type="text"
+                name="username"
+                onChange={handleChange}
+                value={data.username}
             />
             <TextField
                 label="Password"
@@ -34,14 +40,13 @@ const LoginForm = () => {
                 value={data.password}
             />
             <button type="submit" className="form-btn">
-                Войти
+                Зарегистрироваться
             </button>
             <p className="login-from-action">
-                Нет аккаунта?{" "}
-                <Link to="/user-login/register">Зарегистрироваться</Link>
+                Есть аккаунт? <Link to="/user-login/login">Войти</Link>
             </p>
         </form>
     );
 };
 
-export default LoginForm;
+export default RegisterFrom;

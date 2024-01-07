@@ -6,15 +6,12 @@
     label {
         font-size: 1em;
         padding: 5px 0;
+        cursor: auto;
     }
     input {
         padding: 8px;
         background-color: rgba(248, 248, 248, 1);
         border-radius: 3px;
         border: 1px solid rgba(127, 127, 127, 0.5);
-        &:checked {
-            background-color: #9ce060;
-            border-color: #81c63f;
-        }
     }
 }

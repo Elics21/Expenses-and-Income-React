@@ -12,7 +12,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/history/" element={<History />} />
-                <Route path="/user-login/" element={<UserLogin />} />
+                <Route path="/user-login/:type?" element={<UserLogin />} />
             </Routes>
         </>
     );
