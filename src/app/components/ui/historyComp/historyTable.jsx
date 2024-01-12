@@ -9,9 +9,7 @@ const HistoryTable = ({ filterType, currentPage, onChangePage }) => {
     const [operations, setOperations] = useState([]);
 
     useEffect(() => {
-        api.operations
-            .fetchAllOperations()
-            .then((operation) => setOperations(operation));
+        api.operations.fetchAll().then((operation) => setOperations(operation));
     }, []);
 
     if (operations.length === 0) {

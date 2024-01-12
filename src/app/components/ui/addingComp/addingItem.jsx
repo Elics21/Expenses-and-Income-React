@@ -6,9 +6,7 @@ import api from "../../../api";
 const AddingItem = ({ typeItem }) => {
     const [operations, setOperations] = useState([]);
     useEffect(() => {
-        api.operations
-            .fetchAllOperations()
-            .then((operation) => setOperations(operation));
+        api.operations.fetchAll().then((operation) => setOperations(operation));
     }, []);
 
     const renderTitle = (typeOperation) => {

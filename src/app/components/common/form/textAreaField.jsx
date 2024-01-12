@@ -2,7 +2,7 @@ import React from "react";
 import "./form.scss";
 import PropTypes from "prop-types";
 
-const TextField = ({
+const TextAreaField = ({
     label,
     type,
     placeholder,
@@ -17,7 +17,7 @@ const TextField = ({
     return (
         <div className="form-text">
             <label htmlFor={name}>{label}</label>
-            <input
+            <textarea
                 type={type}
                 id={name}
                 placeholder={placeholder}
@@ -25,12 +25,12 @@ const TextField = ({
                 name={name}
                 onChange={handeleChange}
                 className={InputClassName}
-            />
+            ></textarea>
         </div>
     );
 };
 
-TextField.propTypes = {
+TextAreaField.propTypes = {
     label: PropTypes.string,
     type: PropTypes.string,
     name: PropTypes.string,
@@ -41,4 +41,4 @@ TextField.propTypes = {
     InputClassName: PropTypes.string
 };
 
-export default TextField;
+export default TextAreaField;

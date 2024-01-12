@@ -3,6 +3,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 0;
+    &:nth-child(2n+1){
+      background-color: #ebebeb;
+    }
   }
   
   

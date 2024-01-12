@@ -11,7 +11,10 @@ function App() {
             <NavBar />
             <Routes>
                 <Route path="/" element={<Main />} />
-                <Route path="/history/" element={<History />} />
+                <Route
+                    path="/history/:operationId?/:edit?"
+                    element={<History />}
+                />
                 <Route path="/user-login/:type?" element={<UserLogin />} />
             </Routes>
         </>

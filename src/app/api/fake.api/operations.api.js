@@ -107,14 +107,39 @@ const operations = [
     }
 ];
 
-const fetchAllOperations = () => {
-    return new Promise((resolve) => {
+if (!localStorage.getItem("operations")) {
+    localStorage.setItem("operations", JSON.stringify(operations));
+}
+
+const fetchAll = () =>
+    new Promise((resolve) => {
         window.setTimeout(function () {
-            resolve(operations);
+            resolve(JSON.parse(localStorage.getItem("operations")));
         }, 1000);
+    });
+const update = (id, data) => {
+    return new Promise((resolve) => {
+        const operations = JSON.parse(localStorage.getItem("operations"));
+        const operationIndex = operations.findIndex((o) => o.id === Number(id));
+        operations[operationIndex] = { ...operations[operationIndex], ...data };
+        localStorage.setItem("operations", JSON.stringify(operations));
+        resolve(operations[operationIndex]);
     });
 };
 
+const getById = (id) => {
+    return new Promise((resolve) => {
+        window.setTimeout(function () {
+            resolve(
+                JSON.parse(localStorage.getItem("operations")).find(
+                    (operation) => operation.id === Number(id)
+                )
+            );
+        }, 1000);
+    });
+};
 export default {
-    fetchAllOperations
+    fetchAll,
+    getById,
+    update
 };
